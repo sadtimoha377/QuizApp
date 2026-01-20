@@ -7,14 +7,12 @@ class Program
 {
     static string usersFile = "Data/users.json";
     static string resultsFile = "Data/results.json";
-
     static List<User> users;
     static List<QuizResult> results;
 
     static void Main()
     {
         Directory.CreateDirectory("Data");
-
         users = DataService.Load<User>(usersFile);
         results = DataService.Load<QuizResult>(resultsFile);
 
@@ -113,7 +111,6 @@ class Program
         while (!int.TryParse(Console.ReadLine(), out difficulty) || difficulty < 1 || difficulty > 3)
             Console.WriteLine("Invalid option! Try again.");
 
-        string baseDir = AppDomain.CurrentDomain.BaseDirectory;
         string filePath = difficulty switch
         {
             1 => Path.Combine(baseDir, "Data", "easy.txt"),
@@ -129,10 +126,6 @@ class Program
         }
 
         List<Question> selectedQuestions = LoadQuestionsFromFile(filePath);
-
-        selectedQuestions = selectedQuestions.OrderBy(q => Guid.NewGuid())
-                                             .Take(20)
-                                             .ToList();
 
         int score = 0;
         foreach (var q in selectedQuestions)
@@ -195,18 +188,20 @@ class Program
             var answers = parts.Skip(parts.Length - 4).ToList();
             foreach (var a in answers)
             {
-                if (string.IsNullOrEmpty(a)) continue;
                 bool correct = a.EndsWith("*");
                 string text = correct ? a.TrimEnd('*') : a;
                 q.Answers.Add(new Answer { Text = text, IsCorrect = correct });
             }
 
-            q.Answers = q.Answers.OrderBy(x => Guid.NewGuid()).ToList();
+            // перемешиваем ответы
+            var rnd = new Random();
+            q.Answers = q.Answers.OrderBy(x => rnd.Next()).ToList();
             questions.Add(q);
         }
 
         return questions;
     }
+
     static void ShowUserResults(User user)
     {
         var userResults = results.Where(r => r.UserLogin == user.Login)
@@ -239,46 +234,51 @@ class Program
             return;
         }
 
-        Console.WriteLine($"\n Top-20: {quizName}");
-        int rank = 1;
-        foreach (var r in topResults)
-        {
-            Console.WriteLine($"{rank}. {r.UserLogin} - {r.Score} points ({r.Date})");
-            rank++;
-        }
+        Console.WriteLine($"\nTop-20: {quizName}");
+        for (int i = 0; i < topResults.Count; i++)
+            Console.WriteLine($"{i + 1}. {topResults[i].UserLogin} - {topResults[i].Score} pts");
     }
     static void EditUserSettings(User user)
     {
-        Console.WriteLine("\n Account Settings ");
+        Console.WriteLine("\nAccount Settings");
 
         Console.Write($"New login (leave empty to skip) [{user.Login}]: ");
         var newLogin = Console.ReadLine();
         if (!string.IsNullOrEmpty(newLogin))
         {
             if (users.Any(u => u.Login == newLogin))
-                Console.WriteLine("Login already exists! Not changed.");
+                Console.WriteLine("Login exists! Not changed.");
             else
             {
-                string oldLogin = user.Login;
-                user.Login = newLogin;
-                foreach (var r in results.Where(r => r.UserLogin == oldLogin))
+                // update in results
+                foreach (var r in results.Where(r => r.UserLogin == user.Login))
                     r.UserLogin = newLogin;
+
+                user.Login = newLogin;
                 Console.WriteLine("Login updated!");
             }
         }
 
-        Console.Write("New password (leave empty to skip): ");
+        Console.Write("New password: ");
         var newPass = Console.ReadLine();
-        if (!string.IsNullOrEmpty(newPass)) user.Password = newPass;
+        if (!string.IsNullOrEmpty(newPass))
+        {
+            if (newPass.Length < 4)
+                Console.WriteLine("Password too short! Not changed.");
+            else
+            {
+                user.Password = newPass;
+                Console.WriteLine("Password updated!");
+            }
+        }
 
-        Console.Write("New birth date (yyyy-mm-dd, leave empty to skip): ");
+        Console.Write("New birth date (yyyy-mm-dd): ");
         var dateInput = Console.ReadLine();
         if (!string.IsNullOrEmpty(dateInput) && DateTime.TryParse(dateInput, out var newDate))
             user.BirthDate = newDate;
 
         DataService.Save(usersFile, users);
         DataService.Save(resultsFile, results);
-
-        Console.WriteLine("Settings updated!");
+        Console.WriteLine("Settings saved!");
     }
 }
