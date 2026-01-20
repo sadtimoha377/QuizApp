@@ -7,24 +7,12 @@
       "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|c:\\users\\sincirmade\\source\\repos\\quizapp\\quizapp\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|c:\\users\\sincirmade\\source\\repos\\quizapp\\quizapp\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|c:\\users\\sincirmade\\source\\repos\\quizapp\\quizapp\\data\\medium.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\data\\medium.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|c:\\users\\sincirmade\\source\\repos\\quizapp\\quizapp\\data\\hard.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\data\\hard.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|c:\\users\\sincirmade\\source\\repos\\quizapp\\quizapp\\data\\easy.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\data\\easy.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|c:\\users\\sincirmade\\source\\repos\\quizapp\\quizapp\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92172FFF-8B72-D1D3-4625-15E076F27B4F}|QuizApp\\QuizApp.csproj|solutionrelative:quizapp\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "medium.txt",
-              "DocumentMoniker": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Data\\medium.txt",
-              "RelativeDocumentMoniker": "QuizApp\\Data\\medium.txt",
-              "ToolTip": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Data\\medium.txt",
-              "RelativeToolTip": "QuizApp\\Data\\medium.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-20T16:46:35.068Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -65,14 +40,14 @@
               "RelativeDocumentMoniker": "QuizApp\\Program.cs",
               "ToolTip": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Program.cs",
               "RelativeToolTip": "QuizApp\\Program.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAwwIMAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAwwIMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-20T16:09:43.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Models.cs",
               "DocumentMoniker": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Models.cs",
               "RelativeDocumentMoniker": "QuizApp\\Models.cs",
@@ -85,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DataService.cs",
               "DocumentMoniker": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\DataService.cs",
               "RelativeDocumentMoniker": "QuizApp\\DataService.cs",
@@ -94,32 +69,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-20T16:24:24.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "hard.txt",
-              "DocumentMoniker": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Data\\hard.txt",
-              "RelativeDocumentMoniker": "QuizApp\\Data\\hard.txt",
-              "ToolTip": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Data\\hard.txt",
-              "RelativeToolTip": "QuizApp\\Data\\hard.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-20T16:46:34.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "easy.txt",
-              "DocumentMoniker": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Data\\easy.txt",
-              "RelativeDocumentMoniker": "QuizApp\\Data\\easy.txt",
-              "ToolTip": "C:\\Users\\sincirmade\\source\\repos\\QuizApp\\QuizApp\\Data\\easy.txt",
-              "RelativeToolTip": "QuizApp\\Data\\easy.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-01-20T16:46:33.587Z",
               "EditorCaption": ""
             }
           ]
