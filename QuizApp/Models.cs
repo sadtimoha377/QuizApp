@@ -34,3 +34,4 @@ public class QuizResult
     public int Score { get; set; }
     public DateTime Date { get; set; }
 }
+

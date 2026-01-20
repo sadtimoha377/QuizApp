@@ -12,3 +12,4 @@ C:\Users\sincirmade\source\repos\QuizApp\QuizApp\obj\Debug\net9.0\refint\QuizApp
 C:\Users\sincirmade\source\repos\QuizApp\QuizApp\obj\Debug\net9.0\QuizApp.pdb
 C:\Users\sincirmade\source\repos\QuizApp\QuizApp\obj\Debug\net9.0\QuizApp.genruntimeconfig.cache
 C:\Users\sincirmade\source\repos\QuizApp\QuizApp\obj\Debug\net9.0\ref\QuizApp.dll
+C:\Users\sincirmade\source\repos\QuizApp\QuizApp\obj\Debug\net9.0\QuizApp.sourcelink.json
